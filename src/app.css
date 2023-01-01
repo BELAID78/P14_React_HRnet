@@ -1,0 +1,14 @@
+/* variables */
+:root {
+    --white-text: '#fefdff';
+    --white-bg: '#ffffff';
+    --gray-text:'#d0d2fd';
+    --gray-bg: '#f8f8f8';
+    --black-text: '#191a21';
+    --black-bg: '#12131c';
+}
+
+/* globals */
+* {box-sizing: border-box}
+
+body {margin: 0px}
