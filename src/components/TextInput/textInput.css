@@ -35,3 +35,7 @@
     width: 100%;
     background-color: var(--gray-bg);
 }
+
+.text-input label.active {
+    transform: translate(-10px, -35px);
+}
