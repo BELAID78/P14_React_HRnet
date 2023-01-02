@@ -70,6 +70,10 @@ function CreateEmployeeForm() {
 
                 </div>
             </form>
+
+            <div className='m-t-30 text-right'>
+                <button className='btn btn-pink btn-rounded'>Save</button>
+            </div>
         </div>
     )
 }
