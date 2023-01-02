@@ -1,0 +1,22 @@
+.breadcrumb {
+    padding: 20px;
+    text-align: right;
+    font-weight: 500;
+    background: var(--white-bg);
+    box-shadow: var(--gray-shadow);
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.breadcrumb a,
+.breadcrumb a:visited,
+.breadcrumb a:active {
+    color: var(--black-text);
+    font-weight: 500;
+}
+
+.breadcrumb a:not(.active) {
+    color: var(--pink-text);
+}
