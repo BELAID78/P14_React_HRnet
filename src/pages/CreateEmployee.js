@@ -2,7 +2,7 @@ import React from 'react'
 
 function CreateEmployee() {
     return (
-        <div>CreateEmployee</div>
+        <div className='content'>CreateEmployee</div>
     )
 }
 
