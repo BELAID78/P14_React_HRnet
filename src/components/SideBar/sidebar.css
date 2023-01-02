@@ -1,0 +1,75 @@
+.sidebar {
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: var(--black-bg);
+}
+
+.sidebar .list {
+    padding-top: 20px;
+}
+
+.sidebar .logo {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-text);
+}
+
+.sidebar .logo .first-part {
+    color: var(--pink-text);
+    font-family: 'Poiret One', sans-serif;
+    font-weight: 700;
+    transition: all 0.3s linear;
+}
+
+.sidebar .logo:hover .first-part {
+    color: var(--white-text);
+}
+
+.sidebar .logo .second-part {
+    margin-top: -1px;
+    font-family: 'Poiret One', sans-serif;
+    transition: all 0.3s linear;
+    font-weight: 700;
+}
+
+.sidebar .logo:hover .second-part {
+    color: var(--pink-text);
+}
+
+.sidebar .list .devider-list-item {
+    padding: 15px 30px;
+    font-size: 13px;
+    color: var(--gray-text);
+}
+
+.sidebar .list .devider-list-item::selection {
+    background-color: transparent;
+}
+
+.sidebar .list .list-item a {
+    padding: 15px 30px;
+    display: inline-block;
+    width: 100%;
+    transition: all 0.3s linear;
+}
+
+.sidebar .list .list-item a:hover {
+    background-color: var(--black-text);
+}
+
+.sidebar .list .list-item a.active {
+    border-left: 4px var(--pink-text) solid;
+    background-image: linear-gradient(to right, #191a21, #34374b);
+}
+
+.sidebar .list .list-item a,
+.sidebar .list .list-item a:visited,
+.sidebar .list .list-item a:active {
+    text-decoration: none;
+    color:var(--white-text);
+}
