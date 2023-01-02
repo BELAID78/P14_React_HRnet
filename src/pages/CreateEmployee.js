@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import Header from '../components/Header/Header';
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
+import CreateEmployeeForm from '../components/CreateEmployeeForm/CreateEmployeeForm';
 
 function CreateEmployee() {
     return (
@@ -15,6 +16,8 @@ function CreateEmployee() {
             <Breadcrumb>
                 <NavLink to='/employee'>Employee</NavLink> / <NavLink to='/create-employee'>Create</NavLink>
             </Breadcrumb>
+
+            <CreateEmployeeForm />
 
         </div>
     )
