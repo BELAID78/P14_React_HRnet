@@ -1,6 +1,7 @@
 import React from 'react'
 
 import TextInput from './../TextInput/TextInput'
+import DateInput from './../DateInput/DateInput'
 
 import departments from '../../__mock__/departments'
 import states from '../../__mock__/states'
@@ -18,15 +19,9 @@ function CreateEmployeeForm() {
 
                     <TextInput label='Last Name' htmlFor='last-name' type='text' />
 
-                    <div className='date-input'>
-                        <label htmlFor='date-of-birth'>Date of Birth</label>
-                        <input id='date-of-birth' type='date' />
-                    </div>
+                    <DateInput label='Date of Birth' htmlFor='date-of-birth' />
 
-                    <div className='date-input'>
-                        <label htmlFor='start-date'>Start Date</label>
-                        <input id='start-date' type='date' />
-                    </div>
+                    <DateInput label='Start Date' htmlFor='start-date' />
 
                     <div className='select-input'>
                         <label htmlFor='department'>Department</label>
