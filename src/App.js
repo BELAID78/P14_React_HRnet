@@ -6,7 +6,7 @@ import Error from "./pages/Error";
 
 function App() {
   return (
-    <>
+    <div className="container">
       <BrowserRouter>
         {/* ROUTES */}
         <Routes>
@@ -21,7 +21,7 @@ function App() {
 
         {/* CONTENT */}
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

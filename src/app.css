@@ -12,3 +12,7 @@
 * {box-sizing: border-box}
 
 body {margin: 0px}
+
+.container {
+    display: flex;
+}
