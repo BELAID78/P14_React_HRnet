@@ -1,0 +1,21 @@
+.create-form {
+    padding: 20px;
+    background-color: var(--white-bg);
+    box-shadow: var(--gray-shadow);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.create-form form {
+    display: flex;
+    gap: 30px;
+}
+
+.employee-informations, .employee-address {
+    width: 50%;
+}
+
+.create-form h3 {
+    font-weight: 500;
+    text-align: center;
+}
