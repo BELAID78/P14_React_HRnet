@@ -3,6 +3,7 @@ import React from 'react'
 import TextInput from './../TextInput/TextInput'
 import DateInput from './../DateInput/DateInput'
 import SelectInput from './../SelectInput/SelectInput';
+import Button from './../Button/Button';
 
 import departments from '../../__mock__/departments'
 import states from '../../__mock__/states'
@@ -41,7 +42,7 @@ function CreateEmployeeForm() {
             </form>
 
             <div className='m-t-30 text-right'>
-                <button className='btn btn-pink btn-rounded'>Save</button>
+                <Button label='Save' classname='btn btn-pink btn-rounded' />
             </div>
         </div>
     )

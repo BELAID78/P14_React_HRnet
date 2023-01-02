@@ -1,0 +1,23 @@
+.btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn:active {
+    opacity: 1;
+}
+
+.btn.btn-pink {
+    color: var(--white-text);
+    background-color: var(--pink-text);
+}
