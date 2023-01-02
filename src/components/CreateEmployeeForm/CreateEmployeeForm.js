@@ -3,6 +3,7 @@ import React from 'react'
 import './createEmployeeForm.css'
 
 import departments from '../../__mock__/departments'
+import states from '../../__mock__/states'
 
 function CreateEmployeeForm() {
     return (
@@ -42,6 +43,31 @@ function CreateEmployeeForm() {
                 </div>
                 <div className='employee-address'>
                     <h3>Employee address:</h3>
+
+                    <div className='text-input'>
+                        <label htmlFor='street'>Street</label>
+                        <input id='street' type='text' />
+                    </div>
+
+                    <div className='text-input'>
+                        <label htmlFor='city'>City</label>
+                        <input id='city' type='text' />
+                    </div>
+
+                    <div className='text-input'>
+                        <label htmlFor='zip-code'>Zip Code</label>
+                        <input id='zip-code' type='text' />
+                    </div>
+
+                    <div className='select-input'>
+                        <label htmlFor='department'>Department</label>
+                        <select id='department'>
+                            {
+                                states.map(item => <option key={item.id}>{item.value}</option>)
+                            }
+                        </select>
+                    </div>
+
                 </div>
             </form>
         </div>

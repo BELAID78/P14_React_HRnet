@@ -48,3 +48,11 @@ li {
     background-color: #ececec;
     min-height: 100vh;
 }
+
+.text-right {
+    text-align: right;
+}
+
+.m-t-30 {
+    margin-top: 30px;
+}
