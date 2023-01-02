@@ -7,6 +7,8 @@ import Error from "./pages/Error";
 
 import SideBar from "./components/SideBar/SideBar";
 
+import './app.css';
+
 function App() {
   return (
     <div className="container">
@@ -22,7 +24,7 @@ function App() {
           <Route path="/error" element={<Error />} />
           <Route path="/*" element={<Error />}/>
         </Routes>
-        
+
       </BrowserRouter>
     </div>
   );
