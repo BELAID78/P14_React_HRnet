@@ -2,6 +2,7 @@ import React from 'react'
 
 import TextInput from './../TextInput/TextInput'
 import DateInput from './../DateInput/DateInput'
+import SelectInput from './../SelectInput/SelectInput';
 
 import departments from '../../__mock__/departments'
 import states from '../../__mock__/states'
@@ -23,14 +24,7 @@ function CreateEmployeeForm() {
 
                     <DateInput label='Start Date' htmlFor='start-date' />
 
-                    <div className='select-input'>
-                        <label htmlFor='department'>Department</label>
-                        <select id='department'>
-                            {
-                                departments.map(item => <option key={item.id}>{item.value}</option>)
-                            }
-                        </select>
-                    </div>
+                    <SelectInput label='Department' htmlFor='department' data={departments} />
                 </div>
                 <div className='employee-address'>
                     <h3>Employee address:</h3>
@@ -41,14 +35,7 @@ function CreateEmployeeForm() {
 
                     <TextInput label='Zip Code' classname='top-15' htmlFor='zip-code' type='text' />
 
-                    <div className='select-input'>
-                        <label htmlFor='department'>Department</label>
-                        <select id='department'>
-                            {
-                                states.map(item => <option key={item.id}>{item.value}</option>)
-                            }
-                        </select>
-                    </div>
+                    <SelectInput label='State' htmlFor='state' data={states} />
 
                 </div>
             </form>
