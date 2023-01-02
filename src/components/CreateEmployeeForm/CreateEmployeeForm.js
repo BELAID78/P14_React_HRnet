@@ -1,9 +1,11 @@
 import React from 'react'
 
-import './createEmployeeForm.css'
+import TextInput from './../TextInput/TextInput'
 
 import departments from '../../__mock__/departments'
 import states from '../../__mock__/states'
+
+import './createEmployeeForm.css'
 
 function CreateEmployeeForm() {
     return (
@@ -12,15 +14,9 @@ function CreateEmployeeForm() {
                 <div className='employee-informations'>
                     <h3>Employee informations:</h3>
 
-                    <div className='text-input'>
-                        <label htmlFor='first-name'>First Name</label>
-                        <input id='first-name' type='text' />
-                    </div>
+                    <TextInput label='First Name' htmlFor='first-name' type='text' />
 
-                    <div className='text-input'>
-                        <label htmlFor='last-name'>Last Name</label>
-                        <input id='last-name' type='text' />
-                    </div>
+                    <TextInput label='Last Name' htmlFor='last-name' type='text' />
 
                     <div className='date-input'>
                         <label htmlFor='date-of-birth'>Date of Birth</label>
@@ -44,20 +40,11 @@ function CreateEmployeeForm() {
                 <div className='employee-address'>
                     <h3>Employee address:</h3>
 
-                    <div className='text-input'>
-                        <label htmlFor='street'>Street</label>
-                        <input id='street' type='text' />
-                    </div>
+                    <TextInput label='Street' htmlFor='street' type='text' />
 
-                    <div className='text-input'>
-                        <label htmlFor='city'>City</label>
-                        <input id='city' type='text' />
-                    </div>
+                    <TextInput label='City' htmlFor='city' type='text' />
 
-                    <div className='text-input'>
-                        <label htmlFor='zip-code'>Zip Code</label>
-                        <input id='zip-code' type='text' />
-                    </div>
+                    <TextInput label='Zip Code' classname='top-15' htmlFor='zip-code' type='text' />
 
                     <div className='select-input'>
                         <label htmlFor='department'>Department</label>
