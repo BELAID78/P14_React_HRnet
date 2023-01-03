@@ -9,6 +9,9 @@ import departments from '../../__mock__/departments'
 import states from '../../__mock__/states'
 
 import './createEmployeeForm.css'
+import { useDispatch } from 'react-redux';
+import { create } from '../../redux/employeeSlice';
+import Modal from '../Modal/Modal';
 
 function CreateEmployeeForm() {
     const [firstName, setFirstName] = useState('')
@@ -21,16 +24,26 @@ function CreateEmployeeForm() {
     const [department, setDepartment] = useState('Sales')
     const [state, setState] = useState('')
 
+    const [isOpen, setIsOpen] = useState(false)
+
+    const dipatch = useDispatch()
+
     const handleSubmit = () => {
-        console.log(firstName)
-        console.log(lastName)
-        console.log(street)
-        console.log(city)
-        console.log(zipCode)
-        console.log(birthDate)
-        console.log(startDate)
-        console.log(department)
-        console.log(state)
+        const employee = {
+            firstName,
+            lastName,
+            street,
+            city,
+            zipCode,
+            birthDate,
+            startDate,
+            department,
+            state
+        }
+
+        dipatch(create(employee))
+
+        setIsOpen(true)
     }
 
     return (
@@ -114,6 +127,10 @@ function CreateEmployeeForm() {
                     onclick={handleSubmit}
                     />
             </div>
+
+            <Modal title='create employee notification' modalSize='sm' modalHandler = {{ isOpen, setIsOpen}}>
+                <p>Employee Created!</p>
+            </Modal>
         </div>
     )
 }
