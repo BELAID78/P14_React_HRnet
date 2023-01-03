@@ -13,9 +13,11 @@ import './createEmployeeForm.css'
 function CreateEmployeeForm() {
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
-    const [street, setStreetName] = useState('')
-    const [city, setCityName] = useState('')
-    const [zipCode, setZipCodeName] = useState(null)
+    const [street, setStreet] = useState('')
+    const [city, setCity] = useState('')
+    const [zipCode, setZipCode] = useState(null)
+    const [birthDate, setBirthDate] = useState(null)
+    const [startDate, setStartDate] = useState(null)
 
     const handleSubmit = () => {
         console.log(firstName)
@@ -23,6 +25,8 @@ function CreateEmployeeForm() {
         console.log(street)
         console.log(city)
         console.log(zipCode)
+        console.log(birthDate)
+        console.log(startDate)
     }
 
     return (
@@ -47,11 +51,15 @@ function CreateEmployeeForm() {
 
                     <DateInput 
                         label='Date of Birth' 
-                        htmlFor='date-of-birth' />
+                        htmlFor='date-of-birth' 
+                        value={new Date()} 
+                        onchange={setBirthDate} />
 
                     <DateInput 
                         label='Start Date' 
-                        htmlFor='start-date' />
+                        htmlFor='start-date' 
+                        value={new Date()} 
+                        onchange={setStartDate} />
 
                     <SelectInput 
                         label='Department' 
@@ -63,21 +71,21 @@ function CreateEmployeeForm() {
 
                     <TextInput 
                         value={street} 
-                        onchange={setStreetName} 
+                        onchange={setStreet} 
                         label='Street' 
                         htmlFor='street' 
                         type='text' />
 
                     <TextInput 
                         value={city} 
-                        onchange={setCityName} 
+                        onchange={setCity} 
                         label='City' 
                         htmlFor='city' 
                         type='text' />
 
                     <TextInput 
                         value={zipCode} 
-                        onchange={setZipCodeName} 
+                        onchange={setZipCode} 
                         label='Zip Code' 
                         classname='top-15' 
                         htmlFor='zip-code' 
