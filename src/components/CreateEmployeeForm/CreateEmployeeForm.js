@@ -41,6 +41,10 @@ function CreateEmployeeForm() {
             state
         }
 
+        if(firstName === '' || lastName === '' || street === '' || city === '' || zipCode === '' || birthDate === '' || startDate === '' || department === '' || state === '') {
+            return false;
+        }
+
         dipatch(create(employee))
 
         setIsOpen(true)
