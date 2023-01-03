@@ -5,8 +5,13 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import './dataInput.css'
 
-function DateInput({label, htmlFor}) {
-    const [date, setDate] = useState(new Date());
+function DateInput({label, htmlFor, value = new Date(), onchange = () => {}}) {
+    const [date, setDate] = useState(value);
+
+    const handleChangeDate = (date) => {
+        setDate(date)
+        onchange(date)
+    }
 
     return (
         <div className='date-input'>
@@ -14,7 +19,7 @@ function DateInput({label, htmlFor}) {
             <DatePicker
                 id={htmlFor} 
                 selected={date}
-                onChange={(date) => setDate(date)} />
+                onChange={handleChangeDate} />
         </div>
     );
 }
