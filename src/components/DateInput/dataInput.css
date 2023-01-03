@@ -26,3 +26,30 @@
     padding-left: 10px;
     display: inline-block;
 }
+
+.react-datepicker {
+    border: none;
+    box-shadow: 0px 1px 2px grey;
+}
+
+.react-datepicker__header {
+    background-color: var(--pink-text)
+}
+
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
+    border-bottom-color: var(--pink-text)
+}
+
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+    color: var(--white-text);
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--selected:hover {
+    background: var(--pink-text)
+}
+
+.react-datepicker__day-name {
+    color: var(--white-text);
+}
