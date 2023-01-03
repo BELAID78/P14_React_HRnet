@@ -5,33 +5,7 @@ import DataTable from 'react-data-table-component';
 import DataTableFilter from '../DataTableFilter/DataTableFilter';
 
 import './employeedatatable.css'
-
-const employees = [
-    {
-        id: 1,
-        firstName: 'employee 1',
-        lastName: 'employee 1',
-        startDate: 'employee 1',
-        department: 'employee 1',
-        birthDate: 'employee 1',
-        street: 'employee 1',
-        city: 'employee 1',
-        state: 'employee 1',
-        zipCode: 'employee 1',
-    },
-    {
-        id: 2,
-        firstName: 'employee 2',
-        lastName: 'employee 2',
-        startDate: 'employee 2',
-        department: 'employee 2',
-        birthDate: 'employee 2',
-        street: 'employee 2',
-        city: 'employee 2',
-        state: 'employee 2',
-        zipCode: 'employee 2',
-    }
-];
+import { useSelector } from 'react-redux';
 
 const columns = [
 	{
@@ -82,6 +56,8 @@ const columns = [
 ];
 
 export const EmployeeDataTable = () => {
+	const employees = useSelector(state => state.employees)
+	
 	const [filterText, setFilterText] = React.useState('');
 
 	const filteredItems = employees.filter(
@@ -100,7 +76,7 @@ export const EmployeeDataTable = () => {
         <div className='employee-list'>
 
 				<h2>Employee List:</h2>
-
+				
 				<div className='employee-list-datatable'>
 					<DataTable 
 						columns={columns}
