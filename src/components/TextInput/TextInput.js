@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 
 import './textInput.css';
 
-function TextInput({label, htmlFor, type, classname}) {
+function TextInput({label, htmlFor, type, value = '', onchange = () => {}, classname = ''}) {
     const [active, setActive] = useState(false);
     const inputRef = useRef();
 
@@ -16,10 +16,29 @@ function TextInput({label, htmlFor, type, classname}) {
         }
     }
 
+    const handleChange = (e) => {
+        onchange(e.target.value);
+    }
+
     return (
         <div className={'text-input ' + classname}>
-            <label className={active ? 'active' : ''} htmlFor={htmlFor}>{label}</label>
-            <input ref={inputRef} id={htmlFor} type={type}  onFocus={handleActive} onBlur={handleBlur} />
+
+            <label 
+                className={active ? 'active' : ''} 
+                htmlFor={htmlFor} >
+
+                    {label}
+
+            </label>
+
+            <input 
+                ref={inputRef} 
+                id={htmlFor} 
+                type={type} 
+                defaultValue={value} 
+                onChange = {handleChange} 
+                onFocus={handleActive} 
+                onBlur={handleBlur} />
         </div>
     )
 }
