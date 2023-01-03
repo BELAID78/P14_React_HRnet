@@ -10,7 +10,7 @@ function DateInput({label, htmlFor, value = new Date(), onchange = () => {}}) {
 
     const handleChangeDate = (date) => {
         setDate(date)
-        onchange(date)
+        onchange(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`)
     }
 
     return (

@@ -1,22 +1,22 @@
 const departments = [
     {
-        id: 's0001',
+        id: 'Sales',
         value: 'Sales'
     },
     {
-        id: 's0002',
+        id: 'Marketing',
         value: 'Marketing'
     },
     {
-        id: 's0003',
+        id: 'Engineering',
         value: 'Engineering'
     },
     {
-        id: 's0004',
+        id: 'Human Resources',
         value: 'Human Resources'
     },
     {
-        id: 's0005',
+        id: 'Legal',
         value: 'Legal'
     }
 ];

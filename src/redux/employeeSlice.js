@@ -10,8 +10,6 @@ export const employeeSlice = createSlice({
             const newEmployee = action.payload
             
             updateEmployeesStorage([...state, newEmployee])
-            
-            console.log([...state, newEmployee])
 
             return [...state, newEmployee]
         }
