@@ -1,0 +1,73 @@
+.modal {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 99999999999;
+    background: #0000008f;
+    display: none;
+}
+
+.modal.fade-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal-content.sm {
+    width: 40vw;
+}
+
+.modal .modal-content.md {
+    width: 60vw;
+}
+
+.modal .modal-content.lg {
+    width: 90vw;
+}
+
+.modal .modal-content {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+    transform-origin: center center;
+    transform: scale(0) translateY(-200vh);
+}
+
+.modal.fade-in .modal-content {
+    animation: modal-fade-animation 0.2s linear forwards;
+}
+
+.modal.fade-in .modal-content .modal-header,
+.modal.fade-in .modal-content .modal-body,
+.modal.fade-in .modal-content .modal-footer {
+    padding: 10px 20px;
+}
+
+.modal.fade-in .modal-content .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.modal.fade-in .modal-content .modal-header .modal-title {
+    color: var(--black-text);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.modal.fade-in .modal-content .modal-header .modal-close-btn {
+    cursor: pointer;
+}
+
+@keyframes modal-fade-animation {
+    from {
+        transform: scale(0) translateY(-200vh)
+    }
+
+    to {
+        transform: scale(1) translateY(0px)
+    }
+}
