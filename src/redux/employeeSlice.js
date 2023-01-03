@@ -4,16 +4,15 @@ import { readEmployeesFromStorage, updateEmployeesStorage } from "../utils/emplo
 
 export const employeeSlice = createSlice({
     name: 'employee',
-    initialState: [],
+    initialState: readEmployeesFromStorage(),
     reducers: {
-        read: () => {
-            return [readEmployeesFromStorage()]
-        },
         create: (state, action) => {
             const newEmployee = action.payload
             
             updateEmployeesStorage([...state, newEmployee])
             
+            console.log([...state, newEmployee])
+
             return [...state, newEmployee]
         }
     },
