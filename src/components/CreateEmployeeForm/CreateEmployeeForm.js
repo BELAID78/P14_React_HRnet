@@ -18,6 +18,8 @@ function CreateEmployeeForm() {
     const [zipCode, setZipCode] = useState(null)
     const [birthDate, setBirthDate] = useState(null)
     const [startDate, setStartDate] = useState(null)
+    const [department, setDepartment] = useState('Sales')
+    const [state, setState] = useState('')
 
     const handleSubmit = () => {
         console.log(firstName)
@@ -27,6 +29,8 @@ function CreateEmployeeForm() {
         console.log(zipCode)
         console.log(birthDate)
         console.log(startDate)
+        console.log(department)
+        console.log(state)
     }
 
     return (
@@ -64,7 +68,9 @@ function CreateEmployeeForm() {
                     <SelectInput 
                         label='Department' 
                         htmlFor='department' 
-                        data={departments} />
+                        data={departments} 
+                        value={department}
+                        onchange={setDepartment} />
                 </div>
                 <div className='employee-address'>
                     <h3>Employee address:</h3>
@@ -94,7 +100,9 @@ function CreateEmployeeForm() {
                     <SelectInput 
                         label='State' 
                         htmlFor='state' 
-                        data={states} />
+                        data={states} 
+                        value={state}
+                        onchange={setState} />
 
                 </div>
             </form>
