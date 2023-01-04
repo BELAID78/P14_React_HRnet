@@ -60,3 +60,16 @@ li {
 .top-15 {
     top: 15px;
 }
+
+/* new */
+
+.dashboard-container {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.total-container {
+    display: flex;
+    gap: 20px;
+}
