@@ -1,0 +1,28 @@
+.users-card,
+.states-card,
+.departments-card {
+    width: calc(100% / 3);
+    border-radius: 7px;
+    box-shadow: 0px 2px 1px #c1c1c1, 0px 0px 0px 1px gainsboro;
+    padding: 10px;
+    background: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+.card-logo {
+    width: 80px;
+    height: 80px;
+    fill: var(--pink-text);
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
