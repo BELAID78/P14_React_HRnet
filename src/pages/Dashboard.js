@@ -8,8 +8,11 @@ import usersAsSvg from '../images/users';
 import statesAsSvg from '../images/states';
 import departmentsAsSvg from '../images/departments';
 import Card from '../components/Card/Card';
+import { useSelector } from 'react-redux';
 
 function Dashboard() {
+    const employees = useSelector(state => state.employees)
+
     return (
         <div className='content'>
             <Header>
@@ -25,7 +28,7 @@ function Dashboard() {
                     <Card 
                         title='TOTAL USERS' 
                         svg={usersAsSvg} 
-                        total='100' 
+                        total={employees.length} 
                         label='Users' 
                         className='users-card' />
 
