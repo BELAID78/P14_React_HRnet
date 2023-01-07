@@ -2,15 +2,15 @@
     position: relative;
     height: 20px;
     width: calc(50% - 10px);
-    display: flex;
-    flex-direction: column;
-    margin: 20px 10px 30px 0px
+    display: inline-block;
+    margin: 0px 10px 30px 0px;
 }
 
 .select-input label {
     font-weight: bold;
     color: var(--pink-text);
     font-size: 14px;
+    width: 100%;
 }
 
 .select-input select {
@@ -35,4 +35,8 @@
 
 .select-input .select-header .select-header-caret {
     fill: var(--pink-text);
+}
+
+.select-input .select-content .select-list .select-list-item.active {
+    background-color: var(--pink-text);
 }

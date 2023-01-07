@@ -22,7 +22,7 @@ function CreateEmployeeForm() {
     const [birthDate, setBirthDate] = useState(null)
     const [startDate, setStartDate] = useState(null)
     const [department, setDepartment] = useState('Sales')
-    const [state, setState] = useState('')
+    const [state, setState] = useState('Alabama')
 
     const [isOpen, setIsOpen] = useState(false)
 
