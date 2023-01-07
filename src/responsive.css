@@ -32,6 +32,10 @@
 }
 
 @media screen and (max-width: 775px) {
+    .sidebar .logo {
+        font-size: 25px;
+    }
+
     .create-form form {
         display: block;
     }
@@ -47,9 +51,56 @@
     .modal .modal-content.sm {
         width: 70vw;
     }
+
+    .total-container {
+        display: block;
+    }
+
+    .users-card, .states-card, .departments-card {
+        width: 100%;
+        margin: 25px 0px;
+    }
+
+    .users-by-department, .users-by-start-date {
+        padding: 0px;
+        height: 300px;
+    }
+
+    .dashboard-container {
+        margin: 0px;
+    }
+
+    .users-by-start-date {
+        margin-top: 50px;
+    }
+
+    tspan {
+        font-size: 12px;
+    }
+
+    .bar-chart-container {
+        height: 90%;
+    }
 }
 
 @media screen and (max-width: 420px) {
+    .sidebar {
+        width: 65px;
+    }
+
+    .sidebar .logo {
+        font-size: 20px;
+    }
+
+    .content {
+        margin-left: 65px;
+        width: calc(100% - 65px);
+    }
+
+    .list-item {
+        font-size: 10px;
+    }
+
     .text-input {
         display: block;
         width: 100%;
@@ -70,5 +121,9 @@
 
     .modal .modal-content.sm {
         width: 90vw;
+    }
+
+    .datatable-filter {
+        width: 170px;
     }
 }
