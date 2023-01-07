@@ -57,6 +57,7 @@ function CreateEmployeeForm() {
                     <h3>Employee informations:</h3>
 
                     <TextInput 
+                        tabIndex={1}
                         value={firstName} 
                         onchange={setFirstName} 
                         label='First Name' 
@@ -64,6 +65,7 @@ function CreateEmployeeForm() {
                         type='text' />
 
                     <TextInput 
+                        tabIndex={2}
                         value={lastName} 
                         onchange={setLastName} 
                         label='Last Name' 
@@ -71,18 +73,21 @@ function CreateEmployeeForm() {
                         type='text' />
 
                     <DateInput 
+                        tabIndex={3}
                         label='Date of Birth' 
                         htmlFor='date-of-birth' 
                         value={new Date()} 
                         onchange={setBirthDate} />
 
                     <DateInput 
+                        tabIndex={4}
                         label='Start Date' 
                         htmlFor='start-date' 
                         value={new Date()} 
                         onchange={setStartDate} />
 
                     <SelectInput 
+                        tabIndex={5}
                         label='Department' 
                         htmlFor='department' 
                         data={departments} 
@@ -93,6 +98,7 @@ function CreateEmployeeForm() {
                     <h3>Employee address:</h3>
 
                     <TextInput 
+                        tabIndex={6}
                         value={street} 
                         onchange={setStreet} 
                         label='Street' 
@@ -100,6 +106,7 @@ function CreateEmployeeForm() {
                         type='text' />
 
                     <TextInput 
+                        tabIndex={7} 
                         value={city} 
                         onchange={setCity} 
                         label='City' 
@@ -107,6 +114,7 @@ function CreateEmployeeForm() {
                         type='text' />
 
                     <TextInput 
+                        tabIndex={8}
                         value={zipCode} 
                         onchange={setZipCode} 
                         label='Zip Code' 
@@ -115,6 +123,7 @@ function CreateEmployeeForm() {
                         type='number' />
 
                     <SelectInput 
+                        tabIndex={9} 
                         label='State' 
                         htmlFor='state' 
                         data={states} 

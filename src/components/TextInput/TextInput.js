@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 
 import './textInput.css';
 
-function TextInput({label, htmlFor, type, value = '', onchange = () => {}, classname = ''}) {
+function TextInput({label, htmlFor, type, value = '', onchange = () => {}, classname = '', tabIndex = 0}) {
     const [active, setActive] = useState(false);
     const inputRef = useRef();
 
@@ -32,6 +32,7 @@ function TextInput({label, htmlFor, type, value = '', onchange = () => {}, class
             </label>
 
             <input 
+                tabIndex={tabIndex} 
                 ref={inputRef} 
                 id={htmlFor} 
                 type={type} 

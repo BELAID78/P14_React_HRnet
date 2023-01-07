@@ -4,12 +4,12 @@ import Select from 'react-select-menu/dist/components/index'
 
 import './selectInput.css'
 
-function SelectInput({label, htmlFor, data, value = '', onchange = () => {}}) {
+function SelectInput({label, htmlFor, data, value = '', onchange = () => {}, tabIndex = 0}) {
     return (
         <div className='select-input'>
             <label htmlFor={htmlFor}>{label}</label>
             <Select 
-                tabIndex="" 
+                tabIndex={tabIndex} 
                 label="" 
                 modifier={{currentValue: value, valueModifier: onchange}} 
                 data={data} 
