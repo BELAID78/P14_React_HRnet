@@ -14,7 +14,7 @@ function SelectInput({label, htmlFor, data, value = '', onchange = () => {}, tab
                 modifier={{currentValue: value, valueModifier: onchange}} 
                 data={data} 
                 dataKey={{id:'id', value: 'value'}} 
-                zIndex="" />
+                zIndex="9999" />
         </div>
     )
 }
