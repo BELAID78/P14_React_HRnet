@@ -1,20 +1,20 @@
 import React from 'react'
 
+import Select from 'react-select-menu/dist/components/index'
+
 import './selectInput.css'
 
 function SelectInput({label, htmlFor, data, value = '', onchange = () => {}}) {
-    const handleChange = (e) => {
-        onchange(e.target.value)
-    }
-
     return (
         <div className='select-input'>
             <label htmlFor={htmlFor}>{label}</label>
-            <select value={value} onChange={handleChange} id={htmlFor}>
-                {
-                    data.map(item => <option key={item.id} value={item.id} >{item.value}</option>)
-                }
-            </select>
+            <Select 
+                tabIndex="" 
+                label="" 
+                modifier={{currentValue: value, valueModifier: onchange}} 
+                data={data} 
+                dataKey={{id:'id', value: 'value'}} 
+                zIndex="" />
         </div>
     )
 }

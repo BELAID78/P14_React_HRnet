@@ -2,11 +2,9 @@
     position: relative;
     height: 20px;
     width: calc(50% - 10px);
-    display: inline-block;
-}
-
-.select-input {
-    margin: 0px 10px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 30px 0px
 }
 
 .select-input label {
@@ -25,4 +23,16 @@
     margin: 20px 0px;
     padding-left: 10px;
     display: inline-block;
+}
+
+.select-input .select-input {
+    margin: 0px !important;
+    width: 100%;
+    border: 1px solid var(--pink-text);
+    border-radius: 5px;
+    height: 50px;
+}
+
+.select-input .select-header .select-header-caret {
+    fill: var(--pink-text);
 }
