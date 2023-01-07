@@ -9,13 +9,16 @@ import SideBar from "./components/SideBar/SideBar";
 
 import './app.css';
 import './responsive.css';
+import { useSelector } from "react-redux";
 
 function App() {
+  const showSideBar = useSelector(state => state.sidebar.show)
+
   return (
     <div className="container">
       <BrowserRouter>
         {/* SIDE BAR */}
-        <SideBar />
+        { showSideBar && <SideBar /> }
 
         {/* ROUTES */}
         <Routes>
