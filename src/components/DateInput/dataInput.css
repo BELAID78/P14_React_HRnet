@@ -19,8 +19,16 @@
     width: 100%;
     height: 40px;
     padding: 20px;
+    outline-color: var(--pink-text);
+    border: 1px solid var(--pink-text);
+    border-radius: 5px;
 }
 
+.date-input input:focus,
+.date-input input:active {
+    outline-color: var(--pink-text);
+    border-color: var(--pink-text);
+}
 .date-input label {
     margin: 20px 0px;
     padding-left: 10px;

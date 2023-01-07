@@ -30,7 +30,11 @@
     width: 100%;
     border: 1px solid var(--pink-text);
     border-radius: 5px;
-    height: 50px;
+    height: 40px;
+}
+
+.select-input .select-header {
+    padding: 10px 15px;
 }
 
 .select-input .select-header .select-header-caret {
