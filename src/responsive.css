@@ -81,6 +81,14 @@
     .bar-chart-container {
         height: 90%;
     }
+
+    .error-container h1 {
+        font-size: 40px;
+    }
+
+    .error-container p {
+        font-size: 22px;
+    }
 }
 
 @media screen and (max-width: 420px) {
