@@ -2,7 +2,7 @@
     .sidebar {
         width: 90px;
     }
-
+    
     .sidebar .list {
         padding-top: 0px;
     }
@@ -28,5 +28,41 @@
     .content {
         margin-left: 90px;
         width: calc(100% - 90px);
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .create-form form {
+        display: block;
+    }
+
+    .employee-informations, .employee-address {
+        width: 100%;
+    }
+
+    .employee-address {
+        margin-top: 40px;
+    }
+
+    .modal .modal-content.sm {
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .text-input {
+        display: block;
+        width: 100%;
+        margin: 40px 10px 50px 0px;
+    }
+
+    .date-input {
+        display: block;
+        width: 100%;
+        margin: 40px 10px 80px 0px;
+    }
+
+    .modal .modal-content.sm {
+        width: 90vw;
     }
 }
