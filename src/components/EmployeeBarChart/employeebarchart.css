@@ -3,13 +3,16 @@
     box-shadow: 0px 2px 1px #c1c1c1, 0px 0px 0px 1px gainsboro;
     margin: 20px 0px;
     border-radius: 10px;
-    height: 1000px;
 }
 
 .users-by-department,
 .users-by-start-date {
-    height: 50%;
+    height: 500px;
     padding: 20px;
+}
+
+.users-by-start-date {
+    margin-top: 20px;
 }
 
 .bar-chart-container {
