@@ -20,7 +20,7 @@ function SideBar() {
                 <li className='list-item'>
                     <NavLink to='/'>
                         <i className='dashboard-icon'>{dashboard}</i>
-                        Dashboard
+                        <span>Dashboard</span>
                     </NavLink>
                 </li>
                 <li className='devider-list-item'>
@@ -29,13 +29,13 @@ function SideBar() {
                 <li className='list-item'>
                     <NavLink to='employee'>
                         <i className='users-icon'>{users}</i>
-                        All
+                        <span>All</span>
                     </NavLink>
                 </li>
                 <li className='list-item'>
                     <NavLink to='create-employee'>
                         <i className='add-user-icon'>{addUser}</i>
-                        Create
+                        <span>Create</span>
                     </NavLink>
                 </li>
             </ul>

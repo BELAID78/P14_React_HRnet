@@ -8,6 +8,7 @@ import Error from "./pages/Error";
 import SideBar from "./components/SideBar/SideBar";
 
 import './app.css';
+import './responsive.css';
 
 function App() {
   return (
