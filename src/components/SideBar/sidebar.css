@@ -53,9 +53,10 @@
 
 .sidebar .list .list-item a {
     padding: 15px 30px;
-    display: inline-block;
+    display: flex;
     width: 100%;
     transition: all 0.3s linear;
+    align-items: center;
 }
 
 .sidebar .list .list-item a:hover {
@@ -72,4 +73,32 @@
 .sidebar .list .list-item a:active {
     text-decoration: none;
     color:var(--white-text);
+}
+
+.dashboard-icon svg , 
+.users-icon svg , 
+.add-user-icon svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.dashboard-icon svg * ,
+.add-user-icon svg *,
+.users-icon svg * {
+    stroke: white;
+    fill: transparent;
+
+}
+
+.dashboard-icon svg {
+    stroke-width: 1;
+}
+
+.add-user-icon svg {
+    stroke-width: 3;
+}
+
+.users-icon svg {
+    stroke-width: 5;
 }
