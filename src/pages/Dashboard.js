@@ -12,6 +12,7 @@ import statesAsSvg from '../images/states';
 import departmentsAsSvg from '../images/departments';
 
 import departments from '../__mock__/departments';
+import months from '../__mock__/months';
 
 /**
  * group employee by deprtment
@@ -30,10 +31,28 @@ const groupByDepartment = (departments, employees) => {
     })
 }
 
+const groupByMonth = (months, employees) => {
+    return months.map(month => {
+        let {id, value} = month;
+
+        let result = employees.filter(employee => {
+            let employeeStartDate = employee.startDate;
+
+            let employeeMonthStart = parseInt(employeeStartDate.split('/')[1])
+
+            return employeeMonthStart === id
+        })
+
+        return {name: value, value: result.length}
+    })
+}
+
 function Dashboard() {
     const employees = useSelector(state => state.employees)
 
     const employeeGroupByDepartments = groupByDepartment(departments, employees)
+
+    const employeeGroupByStartDate = groupByMonth(months, employees)
 
     return (
         <div className='content'>
@@ -73,7 +92,7 @@ function Dashboard() {
                         <EmployeeBarChart label='Employee bar chart by departments' data={employeeGroupByDepartments} keys={{name:'name', value: 'value'}}/>
                     </div>
                     <div className='users-by-start-date'>
-
+                        <EmployeeBarChart label='Employee bar chart by start date' data={employeeGroupByStartDate} keys={{name:'name', value: 'value'}}/>
                     </div>
                 </div>
             </div>
