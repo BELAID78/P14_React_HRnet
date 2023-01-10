@@ -61,3 +61,7 @@
 .react-datepicker__day-name {
     color: var(--white-text);
 }
+
+.react-datepicker-popper {
+    z-index: 99999;
+}
