@@ -36,9 +36,9 @@ const groupByMonth = (months, employees) => {
         let {id, value} = month;
 
         let result = employees.filter(employee => {
-            let employeeStartDate = employee.startDate;
-
-            let employeeMonthStart = parseInt(employeeStartDate.split('/')[1])
+            let employeeStartDate = employee.startDate,
+                startDateAsArray = employeeStartDate !== null ? employeeStartDate.split('/') : [],
+                employeeMonthStart = startDateAsArray.length > 1 ? parseInt(startDateAsArray[1]) : -1;
 
             return employeeMonthStart === id
         })
