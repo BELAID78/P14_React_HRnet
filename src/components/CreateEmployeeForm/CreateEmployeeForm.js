@@ -26,6 +26,18 @@ function CreateEmployeeForm() {
 
     const [isOpen, setIsOpen] = useState(false)
 
+    const [errorsModalOpen, setErrorModalOpen] = useState(false)
+
+    const [errors, setErrors] = useState({
+        firstName: '',
+        lastName: '',
+        street: '',
+        city: '',
+        zipCode: '',
+        department: '',
+        state: '',
+    })
+
     const dipatch = useDispatch()
 
     const handleSubmit = () => {
@@ -41,13 +53,116 @@ function CreateEmployeeForm() {
             state
         }
 
-        if(firstName === '' || lastName === '' || street === '' || city === '' || zipCode === '' || birthDate === '' || startDate === '' || department === '' || state === '') {
+        validateCreateEmployee();
+        
+        if(firstName === '' || lastName === '' || street === '' || city === '' || zipCode === null || department === '' || state === '') {
+            setErrorModalOpen(true)
             return false;
         }
 
         dipatch(create(employee))
 
         setIsOpen(true)
+    }
+
+    const validateCreateEmployee = () => {
+        firstName === '' ? 
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    firstName: 'you must enter employee first name'
+                }
+            }) : 
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    firstName: ''
+                }
+            })
+
+        lastName === '' ? 
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    lastName: 'you must enter employee last name'
+                }
+            }) :
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    lastName: ''
+                }
+            }) 
+
+        street === '' ? 
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    street: 'you must enter employee street'
+                }
+            }) :
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    street: ''
+                }
+            }) 
+
+        city === '' ? 
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    city: 'you must enter employee city'
+                }
+            }) : 
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    city: ''
+                }
+            }) 
+
+        zipCode === null ? 
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    zipCode: 'you must enter employee zipCode'
+                }
+            }) :
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    zipCode: ''
+                }
+            }) 
+
+        department === '' ? 
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    department: 'you must enter employee department'
+                }
+            }) :
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    department: ''
+                }
+            })
+
+        state === '' ? 
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    state: 'you must enter employee state'
+                }
+            }) : 
+            setErrors(prevErrors => {
+                return {
+                    ...prevErrors, 
+                    state: ''
+                }
+            }) 
     }
 
     return (
@@ -141,8 +256,18 @@ function CreateEmployeeForm() {
                     />
             </div>
 
-            <Modal title='create employee notification' modalSize='sm' modalHandler = {{ isOpen, setIsOpen}}>
+            <Modal title='create employee notification' modalSize='sm' modalHandler={{ isOpen, setIsOpen}}>
                 <p>Employee Created!</p>
+            </Modal>
+
+            <Modal title='create new employee validation error' modalSize='sm' modalHandler={{ isOpen: errorsModalOpen, setIsOpen: setErrorModalOpen}}>
+                { errors.firstName !== '' && <p>{errors.firstName}</p> }
+                { errors.lastName !== '' && <p>{errors.lastName}</p> }
+                { errors.street !== '' && <p>{errors.street}</p> }
+                { errors.city !== '' && <p>{errors.city}</p> }
+                { errors.zipCode !== '' && <p>{errors.zipCode}</p> }
+                { errors.department !== '' && <p>{errors.department}</p> }
+                { errors.state !== '' && <p>{errors.state}</p> }
             </Modal>
         </div>
     )
