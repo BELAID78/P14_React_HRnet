@@ -1,7 +1,6 @@
 {
   "name": "hrnet-app",
   "version": "0.1.0",
-  "homepage": "https://belaid78.github.io/P14_React_HRnet",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
